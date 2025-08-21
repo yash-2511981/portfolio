@@ -53,7 +53,7 @@ export function SkillsSection() {
             </CardHeader>
             <CardContent className="flex flex-col sm:flex-row gap-4 flex-grow items-start">
               <Button asChild size="lg" className="w-full sm:w-auto">
-                <Link href="#" download>
+                <Link href="/YashShetye.pdf" download>
                   <Download className="mr-2 h-4 w-4" /> Download
                 </Link>
               </Button>
@@ -63,7 +63,7 @@ export function SkillsSection() {
                 size="lg"
                 className="w-full sm:w-auto"
               >
-                <Link href="#" target="_blank">
+                <Link href="/YashShetye.pdf" target="_blank">
                   <Eye className="mr-2 h-4 w-4" /> View
                 </Link>
               </Button>

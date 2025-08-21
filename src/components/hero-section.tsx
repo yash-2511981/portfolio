@@ -19,10 +19,10 @@ export function HeroSection() {
           </h2>
           <p className="max-w-xl mx-auto md:mx-0 text-lg text-foreground/80">
             A results-driven Full-Stack Developer with expertise in the MERN
-            stack, dedicated to building and optimizing high-performance web
-            applications. I bridge the gap between frontend and backend
-            development to create seamless, responsive, and intuitive user
-            experiences.
+            stack and Next.js, dedicated to building and optimizing
+            high-performance web applications. I bridge the gap between frontend
+            and backend development to create seamless, responsive, and
+            intuitive user experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button asChild size="lg">
@@ -35,7 +35,7 @@ export function HeroSection() {
         </div>
         <div className="flex justify-center items-center">
           <Image
-            src="https://placehold.co/400x400.png"
+            src="/ProfilePhoto.jpg"
             data-ai-hint="professional portrait"
             alt="Yash Shetye"
             width={400}

@@ -32,18 +32,18 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <Sheet>
       <Card className="flex flex-col h-full overflow-hidden transition-shadow duration-300 hover:shadow-xl group">
-        <CardHeader className="p-0">
-          <div className="aspect-video relative overflow-hidden rounded-t-lg">
+        <CardHeader className="p-0 m-0 relative">
+          <div className="aspect-[4/2] rounded-t-lg">
             <Image
               src={project.images[0]}
               alt={project.images_alt[0]}
               fill
-              className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-105"
+              className="object-fill absolute top-0 rounded-t-lg transition-transform duration-500 group-hover:scale-105 w-full h-full"
               data-ai-hint={project.data_ai_hint?.[0]}
             />
           </div>
         </CardHeader>
-        <CardContent className="flex-grow p-6 space-y-4">
+        <CardContent className="flex-grow px-3 space-y-3 justify-between">
           <CardTitle className="font-headline text-2xl">
             {project.title}
           </CardTitle>
@@ -58,9 +58,9 @@ export function ProjectCard({ project }: { project: Project }) {
             ))}
           </div>
         </CardContent>
-        <CardFooter className="p-6 pt-0 flex-col items-start gap-4">
-          <div className="flex items-center gap-2">
-            <Button asChild variant="ghost" size="icon">
+        <CardFooter className="px-2 items-center flex gap-2 w-full justify-between">
+          <div className="flex justify-between items-center gap-2">
+            <Button asChild variant="secondary">
               <Link
                 href={project.githubUrl}
                 target="_blank"
@@ -69,7 +69,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 <Github className="h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild variant="ghost" size="icon">
+            <Button asChild variant="default">
               <Link
                 href={project.liveUrl}
                 target="_blank"

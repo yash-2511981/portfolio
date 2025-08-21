@@ -1,30 +1,43 @@
 import Link from "next/link";
 import { socialLinks } from "@/lib/data";
-import { Code2 } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="w-full py-6 bg-card border-t">
-      <div className="container flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
-        <div className="flex items-center gap-2">
-          <Code2 className="h-5 w-5 text-primary" />
-          <span className="font-headline font-bold">Yash Shetye</span>
+    <footer className="w-full border-t bg-card py-6 px-6">
+      <div className="container grid gap-6 md:grid-cols-3 text-sm">
+        {/* Contact Info */}
+        <div className="space-y-3">
+          <h3 className="text-base font-semibold text-foreground">Contact</h3>
+          <div className="flex items-center text-foreground/70">
+            <Mail className="mr-2 h-5 w-5" />
+            <span>shetyeyash444@gmail.com</span>
+          </div>
+          <div className="flex items-center text-foreground/70">
+            <Phone className="mr-2 h-5 w-5" />
+            <span>8788064485</span>
+          </div>
         </div>
-        <div className="text-center text-foreground/60">
-          © {new Date().getFullYear()} Yash Shetye. All rights reserved.
-        </div>
-        <div className="flex items-center gap-4">
+
+        {/* Social Links */}
+        <div className="flex flex-wrap items-center gap-4 md:justify-center">
           {socialLinks.map((link) => (
             <Link
               key={link.name}
               href={link.url}
               target="_blank"
-              className="text-foreground/60 hover:text-primary transition-colors"
+              rel="noopener noreferrer"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-foreground/70 hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label={link.name}
             >
-              <link.icon className="h-6 w-6" />
+              <link.icon className="h-5 w-5" />
             </Link>
           ))}
+        </div>
+
+        {/* Copyright */}
+        <div className="flex items-center md:justify-end text-foreground/60">
+          © {new Date().getFullYear()} Yash Shetye. All rights reserved.
         </div>
       </div>
     </footer>

@@ -12,7 +12,7 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="w-full py-12 md:py-24 lg:py-32 bg-secondary"
+      className="w-full py-18 md:py-24 lg:py-32 bg-secondary"
     >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -25,12 +25,12 @@ export function ProjectsSection() {
             </p>
           </div>
         </div>
-        <div className="mx-auto max-w-6xl py-12">
-          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+        <div className="mx-auto max-w-6xl py-6">
+          <Carousel opts={{ loop: true }} className="w-full">
             <CarouselContent>
               {projects.map((project, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
+                  <div className="h-full">
                     <ProjectCard project={project} />
                   </div>
                 </CarouselItem>

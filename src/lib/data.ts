@@ -1,12 +1,46 @@
-import {
-  Github,
-  Linkedin,
-  type LucideIcon,
-  CodeIcon,
-} from "lucide-react";
+import { Github, Linkedin, type LucideIcon, CodeIcon } from "lucide-react";
 import type { Project, Education, Certification } from "./types";
 
 export const projects: Project[] = [
+  {
+    title: "Grabit (Food Delivery Platform)",
+    description:
+      "A food delivery platform combining restaurant orders and mess-based subscription meals with flexibility and real-world usability.",
+    images: [
+      "/Grabit/0.png",
+      "/Grabit/1.png",
+      "/Grabit/2.png",
+      "/Grabit/3.png",
+      "/Grabit/4.png",
+    ],
+    images_alt: [
+      "screenshot of Grabit platform home page",
+      "screenshot of Grabit restaurant listing",
+      "screenshot of Grabit mess subscription plans",
+      "screenshot of Grabit cart and checkout",
+      "screenshot of Grabit order tracking",
+    ],
+    data_ai_hint: [
+      "food delivery application",
+      "subscription-based meal service",
+      "real-world scalable platform",
+    ],
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Tailwind CSS",
+      "Razorpay",
+      "WebSockets",
+    ],
+    githubUrl: "https://github.com/yash-2511981/grabit", // update with actual repo
+    liveUrl: "https://grabit-app.vercel.app", // update with actual live URL
+    longDescription:
+      "Grabit is a scalable food delivery platform that bridges restaurants and mess-based meal subscriptions. Designed for flexibility, it allows users to order food on demand or subscribe to monthly meal plans with features like meal pausing, cancellation before cutoff times, OTP-based delivery confirmation, and vendor-controlled notifications. The system ensures user convenience while keeping vendor profitability in mind. Built using the MERN stack with WebSockets for real-time updates and Razorpay integration for secure payments.",
+  },
+
   {
     title: "ProFileBuilder (AI Resume Builder)",
     description:
@@ -148,7 +182,6 @@ export const navLinks: { name: string; href: string }[] = [
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Education", href: "#education" },
-  { name: "Contact", href: "#contact" },
 ];
 
 export const socialLinks: { name: string; url: string; icon: LucideIcon }[] = [

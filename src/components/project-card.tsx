@@ -31,15 +31,14 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <Sheet>
-      <Card className="flex flex-col h-full overflow-hidden transition-shadow duration-300 hover:shadow-xl group">
+      <Card className="flex flex-col h-full overflow-hidden transition-shadow duration-300 hover:shadow-xl group pt-0">
         <CardHeader className="p-0 m-0 relative">
-          <div className="aspect-[4/2] rounded-t-lg">
+          <div className="aspect-[4/2] wrounded-t-lg">
             <Image
               src={project.images[0]}
-              alt={project.images_alt[0]}
+              alt="project Image"
               fill
-              className="object-fill absolute top-0 rounded-t-lg transition-transform duration-500 group-hover:scale-105 w-full h-full"
-              data-ai-hint={project.data_ai_hint?.[0]}
+              className="object-fill rounded-t-lg w-full h-full"
             />
           </div>
         </CardHeader>
@@ -79,11 +78,11 @@ export function ProjectCard({ project }: { project: Project }) {
               </Link>
             </Button>
           </div>
-          <SheetTrigger asChild>
-            <Button variant="link" className="p-0 h-auto text-primary">
+          <Button variant="link" className="p-0 h-auto text-primary" asChild>
+            <SheetTrigger>
               View Details <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </SheetTrigger>
+            </SheetTrigger>
+          </Button>
         </CardFooter>
       </Card>
       <SheetContent className="w-full sm:max-w-xl lg:max-w-2xl p-0">
@@ -102,7 +101,7 @@ export function ProjectCard({ project }: { project: Project }) {
                       <div className="aspect-video relative">
                         <Image
                           src={image}
-                          alt={project.images_alt[index]}
+                          alt={`${project.images_alt[index]}`}
                           fill
                           className="object-cover rounded-lg border"
                           data-ai-hint={project.data_ai_hint?.[index]}
